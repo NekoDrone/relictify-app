@@ -12,7 +12,7 @@ const App = () => {
             combatPath={CombatPath.THE_HUNT}
             pageTitle={"Light Cone"}
         />
-        <Link className="text-center bg-purple-50 text-gray-700 rounded p-2" href={"/"}>Home :)</Link>
+        <Link className="text-center bg-purple-50 text-gray-700 rounded p-2" href={"/"}>Home</Link>
     </div>
     );
 }

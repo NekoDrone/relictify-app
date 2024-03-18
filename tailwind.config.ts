@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -15,7 +16,8 @@ const config: Config = {
       },
     },
     colors: {
-      'gold': '#e5ca94'
+      'gold': '#e5ca94',
+      ...colors
     }
   },
   plugins: [],
