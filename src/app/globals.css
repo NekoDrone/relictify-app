@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.gold-filter {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(4%) saturate(3320%) hue-rotate(332deg) brightness(91%) contrast(97%);
+}
