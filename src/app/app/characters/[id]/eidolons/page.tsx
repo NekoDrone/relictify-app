@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { AppPage } from "@/exports/entities";
 import { PageWrapper } from "@/components/Pages/PageWrapper";
 
-const DetailsPage: FC = () => {
+const EidolonsPage: FC = () => {
     const params = useParams<{ id: string }>()
     const id = parseInt(params.id, 10)
     const page = AppPage.EIDOLONS
@@ -14,4 +14,4 @@ const DetailsPage: FC = () => {
     )
 }
 
-export default DetailsPage
+export default EidolonsPage
