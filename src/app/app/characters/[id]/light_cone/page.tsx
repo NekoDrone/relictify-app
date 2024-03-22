@@ -8,7 +8,7 @@ import { PageWrapper } from "@/components/Pages/PageWrapper";
 const LightConePage: FC = () => {
     const params = useParams<{ id: string }>()
     const id = parseInt(params.id, 10)
-    const page = AppPage.EIDOLONS
+    const page = AppPage.LIGHT_CONE
     return (
         <PageWrapper charId={id} page={page}/>
     )
