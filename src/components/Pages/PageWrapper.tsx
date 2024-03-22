@@ -15,7 +15,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({
 }) => {
     return (
         <>
-            <CarouselItem/>
+            <CarouselItem charId={charId}/>
             <PageNav charId={charId}/>
             <div>{page}</div>
         </>
