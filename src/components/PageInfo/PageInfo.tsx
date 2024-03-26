@@ -14,7 +14,7 @@ const PageInfo: FC<PageInfoProps> = ({
     activeChar,
 }) => {
     return (
-        <div className={"flex items-center gap-2 p-16"}>
+        <div className={"flex items-center gap-2"}>
             <Image
                 src={"/assets/general/character_generic.webp"}
                 alt={"Character Info Icon"}
