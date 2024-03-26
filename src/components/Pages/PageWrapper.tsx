@@ -35,7 +35,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({
                 </div>
             </div>
             <div className={"flex pl-36 pr-14 gap-10"}>
-                <PageNav charId={charId}/>
+                <PageNav charId={charId} highlighted={page}/>
                 { page == AppPage.DETAILS && <DetailsContent/> }
                 { page == AppPage.EIDOLONS && <EidolonsContent/> }
                 { page == AppPage.LIGHT_CONE && <LightConeContent/> }
