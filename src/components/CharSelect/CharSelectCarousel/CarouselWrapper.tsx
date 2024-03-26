@@ -1,5 +1,5 @@
 import { CarouselItem } from "@/components/CharSelect/CharSelectCarousel/CarouselItem";
-import { CharacterId } from "@/exports/characters/entities";
+import { CharacterId } from "@/shared/characters/entities";
 import { FC } from "react";
 
 export interface CarouselProps {

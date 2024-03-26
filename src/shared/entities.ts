@@ -5,6 +5,17 @@ export enum CombatPath {
     HARMONY = "harmony",
     PRESERVATION = "preservation",
     THE_HUNT = "the_hunt",
+    NIHILITY = "nihility"
+}
+
+export enum CombatElement {
+    LIGHTNING = "lightning",
+    FIRE = "fire",
+    ICE = "ice",
+    PHYSICAL = "physical",
+    WIND = "wind",
+    QUANTUM = "quantum",
+    IMAGINARY = "imaginary"
 }
 
 export const humanisePathEnum = (enumValue: CombatPath) => {

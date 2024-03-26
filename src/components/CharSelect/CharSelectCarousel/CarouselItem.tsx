@@ -1,4 +1,4 @@
-import { CharacterId, getCharacterString, getCharacterStringHumanised } from "@/exports/characters/entities";
+import { CharacterId, getCharacterString, getCharacterStringHumanised } from "@/shared/characters/entities";
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";

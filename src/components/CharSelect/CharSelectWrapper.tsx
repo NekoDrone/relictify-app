@@ -1,5 +1,5 @@
 import { CarouselWrapper } from "@/components/CharSelect/CharSelectCarousel/CarouselWrapper";
-import { CharacterId } from "@/exports/characters/entities";
+import { CharacterId } from "@/shared/characters/entities";
 import { FC } from "react";
 
 export interface CharSelectProps {
