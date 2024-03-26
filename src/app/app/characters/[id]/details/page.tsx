@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { useParams } from "next/navigation";
-import { AppPage } from "@/exports/entities";
+import { AppPage } from "@/shared/entities";
 import { PageWrapper } from "@/components/Pages/PageWrapper";
 
 const DetailsPage: FC = () => {
