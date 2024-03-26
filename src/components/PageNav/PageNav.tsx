@@ -1,5 +1,5 @@
 import { PageNavItem } from "@/components/PageNav/PageNavItem/PageNavItem";
-import { AppPage } from "@/exports/entities";
+import { AppPage } from "@/shared/entities";
 import { FC } from "react";
 
 interface NavBarProps {

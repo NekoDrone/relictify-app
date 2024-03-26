@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AppPage, humanisePageEnum } from "@/exports/entities";
+import { AppPage, humanisePageEnum } from "@/shared/entities";
 import { FC } from "react";
 import Link from "next/link";
 
