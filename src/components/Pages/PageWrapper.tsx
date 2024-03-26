@@ -1,6 +1,6 @@
 import { PageNav } from "@/components/PageNav/PageNav";
-import { FC, useEffect, useMemo } from "react";
-import { AppPage, CombatPath } from "@/shared/entities";
+import { FC, useMemo } from "react";
+import { AppPage } from "@/shared/entities";
 import { DetailsContent } from "@/components/Pages/DetailsContent/DetailsContent";
 import { EidolonsContent } from "@/components/Pages/EidolonsContent/EidolonsContent";
 import { LightConeContent } from "@/components/Pages/LightConeContent/LightConeContent";
@@ -8,7 +8,7 @@ import { RelicsContent } from "@/components/Pages/RelicsContent/RelicsContent";
 import { TracesContent } from "@/components/Pages/TracesContent/TracesContent";
 import { MissingContent } from "@/components/Pages/MissingContent/MissingContent";
 import { CharSelectWrapper } from "@/components/CharSelect/CharSelectWrapper";
-import { CharacterId, CharacterInfo, getCharacterStringHumanised, getCharById } from "@/shared/characters/entities";
+import { CharacterId, getCharById } from "@/shared/characters/entities";
 import PageInfo from "@/components/PageInfo/PageInfo";
 import { seeleMock } from "@/mocks/characters/seele";
 
@@ -26,6 +26,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({
 }) => {
     const characters = [CharacterId.SEELE]
     
+    // TODO: When ready, remove setCharacterTemp() and replace with proper method for retrieving data.
     const activeChar = useMemo(() => {
         setCharacterTemp()
         return getCharById(charId)
