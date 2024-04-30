@@ -4,25 +4,23 @@ import React from "react";
 import localFont from "next/font/local";
 
 const din = localFont({
-  src: "../../public/fonts/DIN.ttf",
-})
+    src: "../../public/fonts/DIN.ttf",
+});
 export const metadata: Metadata = {
-  title: "Relictify",
-  description: "A relics simulator for Honkai: Star Rail",
+    title: "Relictify",
+    description: "A relics simulator for Honkai: Star Rail",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={din.className}>
-        <main>
-          {children}
-        </main>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={din.className}>
+                <main>{children}</main>
+            </body>
+        </html>
+    );
 }
