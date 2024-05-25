@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Relictify
 
-## Getting Started
+Relictify is an equipment tracking app for the game [Honkai: Star Rail](https://hsr.hoyoverse.com/)
 
-First, run the development server:
+The project aims to build a SPA web app that maintains parity with the in-game Character (Relics) menu.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Additionally, enhancements are planned to allow for easier theorycrafting and buildcrafting of characters.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Details
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Relictify was originally built with [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor), with an [ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project is now undergoing a rewrite, and is slated to be built as a self-contained Single Page Application written in [Next.js](https://nextjs.org/) in TypeScript.
 
-## Learn More
+An API server exists to deliver configuration files to the client, written in [Express](https://expressjs.com/) and TypeScript. The API repository may be found [here](https://github.com/NekoDrone/relictify-api), but the API layer is not currently accepting contributions at this time.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project may be accessed at [NYI].
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For contribution guidelines, please look at CONTRIBUTING.MD.
 
-## Deploy on Vercel
+## Acknowledgements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [HSR Fandom Wiki](https://honkai-star-rail.fandom.com/) for accurate data reporting and formulation, the bulk of which this project relies on.
+- [Star Rail Station](https://starrailstation.com/) for many of the inspirations behind the project.
+- [Hoyoverse](https://www.hoyoverse.com/) for creating Honkai: Star Rail.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributors
+
+- NekoDrone (Project Lead)
+- Hollyw27 (Founding Contributor)
+- Archeri2000 (Technical Advisor)
