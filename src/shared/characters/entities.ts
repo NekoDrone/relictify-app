@@ -1,3 +1,5 @@
+import { CombatElement, CombatPath } from "@/shared/entities";
+
 export enum CharacterId {
     TRAILBLAZER,
     BRONYA,
@@ -21,4 +23,24 @@ enum characterStrings {
     TRAILBLAZER = "trailblazer",
     BRONYA = "bronya",
     SEELE = "seele"
+}
+
+export interface CharacterInfo {
+    id: CharacterId
+    rarity: number,
+    name: string,
+    element: CombatElement,
+    path: CombatPath,
+    startingHp: number
+    startingAtk: number,
+    startingDef: number,
+    startingSpd: number,
+}
+
+export function getCharById(id: number) {
+    const jsonData = localStorage.getItem(id.toString())
+    if(jsonData === null) {
+        throw new Error(`Could not find character of id: ${id}`)
+    }
+    return JSON.parse(jsonData) as CharacterInfo
 }

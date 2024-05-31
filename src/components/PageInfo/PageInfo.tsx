@@ -1,20 +1,19 @@
 import Image from "next/image";
-import { AppPage, CombatPath, humanisePageEnum, humanisePathEnum } from "@/exports/entities";
+import { AppPage, CombatPath, humanisePageEnum, humanisePathEnum } from "@/shared/entities";
 import { FC } from "react";
+import { CharacterInfo } from "@/shared/characters/entities";
 
 export interface PageInfoProps {
     pageTitle: AppPage,
-    combatPath: CombatPath
-    activeChar: string
+    activeChar: CharacterInfo
 }
 
 const PageInfo: FC<PageInfoProps> = ({
     pageTitle,
-    combatPath,
     activeChar,
 }) => {
     return (
-        <div className={"flex items-center gap-2 p-16"}>
+        <div className={"flex items-center gap-2"}>
             <Image
                 src={"/assets/general/character_generic.webp"}
                 alt={"Character Info Icon"}
@@ -26,13 +25,13 @@ const PageInfo: FC<PageInfoProps> = ({
                 <p className="text-lg text-gold font-medium">{humanisePageEnum(pageTitle)}</p>
                 <div className={"flex"}>
                     <Image
-                        src={`/assets/combat_paths/path_${combatPath}.webp`}
+                        src={`/assets/combat_paths/path_${activeChar.path}.webp`}
                         alt={"Path Icon"}
                         width={24}
                         height={16}
                         className={"p-1"}
                     />
-                    <p className="text-xl font-medium">{humanisePathEnum(combatPath)} / {activeChar}</p>
+                    <p className="text-xl font-medium">{humanisePathEnum(activeChar.path)} / {activeChar.name}</p>
                 </div>
             </div>
         </div>
