@@ -1,1 +1,0 @@
-// should redirect to first ID fallback, OR open the list of characters

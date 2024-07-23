@@ -1,7 +1,7 @@
 'use client'
 
 import { FC } from "react";
-import { ParamsProps } from "@/shared/types";
+import { ParamsProps } from "@/exports/types";
 import { redirect } from "next/navigation";
 
 const CharBasePage: FC<ParamsProps> = ({
