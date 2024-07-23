@@ -1,4 +1,4 @@
-export enum CombatPath {
+export enum CharPath {
     ABUNDANCE = "abundance",
     DESTRUCTION = "destruction",
     ERUDITION = "erudition",
@@ -18,9 +18,9 @@ export enum CombatElement {
     IMAGINARY = "imaginary"
 }
 
-export const humanisePathEnum = (enumValue: CombatPath) => {
+export const humanisePathEnum = (enumValue: CharPath) => {
     // Lazy implementation, can definitely be better
-    return enumValue == CombatPath.THE_HUNT ? "The Hunt" : enumValue.charAt(0).toUpperCase() + enumValue.slice(1);
+    return enumValue == CharPath.THE_HUNT ? "The Hunt" : enumValue.charAt(0).toUpperCase() + enumValue.slice(1);
 }
 
 export enum AppPage {

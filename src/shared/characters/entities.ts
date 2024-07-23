@@ -1,4 +1,4 @@
-import { CombatElement, CombatPath } from "@/shared/entities";
+import { CombatElement, CharPath } from "@/shared/entities";
 
 export enum CharacterId {
     TRAILBLAZER,
@@ -30,7 +30,7 @@ export interface CharacterInfo {
     rarity: number,
     name: string,
     element: CombatElement,
-    path: CombatPath,
+    path: CharPath,
     startingHp: number
     startingAtk: number,
     startingDef: number,
