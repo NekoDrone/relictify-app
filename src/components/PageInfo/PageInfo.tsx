@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AppPage, CombatPath, humanisePageEnum, humanisePathEnum } from "@/shared/entities";
+import { AppPage, CharPath, humanisePageEnum, humanisePathEnum } from "@/shared/entities";
 import { FC } from "react";
 import { CharacterInfo } from "@/shared/characters/entities";
 
