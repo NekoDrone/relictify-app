@@ -15,7 +15,7 @@ export default function NotFound() {
                 </div>
                 <div className="flex justify-center align-middle h-fit">
                     <Link href={"/"} replace>
-                        <button className="justify-center bg-gold text-black w-auto rounded w-auto p-2">Back home!
+                        <button className="justify-center bg-gold text-black rounded w-auto p-2">Back home!
                         </button>
                     </Link>
                 </div>
