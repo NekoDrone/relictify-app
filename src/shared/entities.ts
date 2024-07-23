@@ -1,37 +1,37 @@
 export enum CharPath {
-    ABUNDANCE = "abundance",
-    DESTRUCTION = "destruction",
-    ERUDITION = "erudition",
-    HARMONY = "harmony",
-    PRESERVATION = "preservation",
-    THE_HUNT = "the_hunt",
-    NIHILITY = "nihility"
+    ABUNDANCE = "ABUNDANCE",
+    DESTRUCTION = "DESTRUCTION",
+    ERUDITION = "ERUDITION",
+    HARMONY = "HARMONY",
+    PRESERVATION = "PRESERVATION",
+    HUNT = "HUNT",
+    NIHILITY = "NIHILITY"
 }
 
 export enum CombatElement {
-    LIGHTNING = "lightning",
-    FIRE = "fire",
-    ICE = "ice",
-    PHYSICAL = "physical",
-    WIND = "wind",
-    QUANTUM = "quantum",
-    IMAGINARY = "imaginary"
+    LIGHTNING = "LIGHTNING",
+    FIRE = "FIRE",
+    ICE = "ICE",
+    PHYSICAL = "PHYSICAL",
+    WIND = "WIND",
+    QUANTUM = "QUANTUM",
+    IMAGINARY = "IMAGINARY"
 }
 
 export const humanisePathEnum = (enumValue: CharPath) => {
-    // Lazy implementation, can definitely be better
-    return enumValue == CharPath.THE_HUNT ? "The Hunt" : enumValue.charAt(0).toUpperCase() + enumValue.slice(1);
+    const pathString = enumValue.toLowerCase();
+    return pathString == "hunt" ? "The Hunt" : pathString.charAt(0).toUpperCase() + pathString.slice(1);
 }
 
-export enum AppPage {
-    DETAILS = "details",
-    EIDOLONS = "eidolons",
-    LIGHT_CONE = "light_cone",
-    RELICS = "relics",
-    TRACES = "traces",
+export const flattenPathEnum = (enumValue: CharPath) => {
+    return enumValue.toLowerCase();
 }
 
-export const humanisePageEnum = (enumValue: AppPage) => {
-    // Lazy implementation, can definitely be better
-    return enumValue == AppPage.LIGHT_CONE ? "Light Cone" : enumValue.charAt(0).toUpperCase() + enumValue.slice(1);
+export const humaniseElementEnum = (enumValue: CombatElement) => {
+    const elementString = enumValue.toLowerCase();
+    return elementString.charAt(0).toUpperCase() + elementString.slice(1);
+}
+
+export const flattenElementEnum = (enumValue: CombatElement) => {
+    return enumValue.toLowerCase();
 }
