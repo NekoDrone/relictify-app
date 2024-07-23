@@ -1,9 +1,10 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useManifestStore } from "@/utilities/stores/manifest";
 import { humaniseElementEnum, humanisePathEnum } from "@/shared/entities";
+import { Loading } from "@/components/Loading/Loading";
 
 const LandingPage = () => {
     
@@ -23,7 +24,17 @@ const LandingPage = () => {
             </Link>
 
             <h1 className="text-center p-4">Loaded Characters:</h1>
-            {characters ? (characters.length && characters.map((character) => {return <p key={character.id}>{character.name} | {character.rarity}* | {humaniseElementEnum(character.element)} | {humanisePathEnum(character.path)}</p>})) : ''}
+            <Suspense fallback={<Loading/>}>
+                {characters ?
+                    (characters.length &&
+                        characters.map((character) => {
+                            return <p key={character.id}>
+                                {character.name} 
+                                 | {character.rarity}* 
+                                 | {humaniseElementEnum(character.element)} 
+                                 | {humanisePathEnum(character.path)}</p>})) : <Loading/>}
+            </Suspense>
+            
         </div>
     );
 }
