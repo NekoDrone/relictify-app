@@ -1,9 +1,10 @@
 import { create } from "zustand";
 import { getManifest } from "@/functions/api/getManifest";
 import { MetadataRoute } from "next";
+import { Character } from "@/shared/types";
 
 export interface ManifestItems {
-    characters?: any
+    characters?: Character[]
 }
 
 export interface ManifestState {
@@ -11,7 +12,7 @@ export interface ManifestState {
     updateManifest: () => void;
 }
 
-const useManifestStore = create<ManifestState>((set) => ({
+export const useManifestStore = create<ManifestState>((set) => ({
     manifest: {},
     updateManifest: async () => set({ manifest: await getManifest() })
 }))
