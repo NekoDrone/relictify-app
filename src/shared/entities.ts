@@ -35,3 +35,20 @@ export const humaniseElementEnum = (enumValue: CombatElement) => {
 export const flattenElementEnum = (enumValue: CombatElement) => {
     return enumValue.toLowerCase();
 }
+
+export enum PageCategories {
+    DETAILS = "DETAILS",
+    LIGHT_CONE = "LIGHT_CONE",
+    TRACES = "TRACES",
+    RELICS = "RELICS",
+    EIDOLONS = "EIDOLONS",
+}
+
+export const humanisePageCategories = (pages: PageCategories) => {
+    const pageString = pages.toLowerCase();
+    return pageString == "light_cone" ? "Light Cone" : pageString.charAt(0).toUpperCase() + pageString.slice(1);
+}
+
+export const flattenPageCategories = (pages: PageCategories) => {
+    return pages.toLowerCase();
+}
