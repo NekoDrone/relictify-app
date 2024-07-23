@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useManifestStore } from "@/utilities/stores/manifest";
-import { humanisePathEnum } from "@/shared/entities";
+import { humaniseElementEnum, humanisePathEnum } from "@/shared/entities";
 
 const LandingPage = () => {
     
@@ -23,7 +23,7 @@ const LandingPage = () => {
             </Link>
 
             <h1 className="text-center p-4">Loaded Characters:</h1>
-            {characters ? (characters.length && characters.map((character) => {return <p key={character.id}>{character.name} | {character.rarity}* | {character.element} | {humanisePathEnum(character.path)}</p>})) : ''}
+            {characters ? (characters.length && characters.map((character) => {return <p key={character.id}>{character.name} | {character.rarity}* | {humaniseElementEnum(character.element)} | {humanisePathEnum(character.path)}</p>})) : ''}
         </div>
     );
 }
