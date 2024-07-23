@@ -11,7 +11,7 @@ const getCharactersManifest = async () => {
     return (await fetch(req)).json();
 }
 
-const getManifest = async () => {
+export const getManifest = async () => {
     return {
         characters: await getCharactersManifest(),
     };
