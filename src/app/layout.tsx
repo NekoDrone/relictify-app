@@ -21,16 +21,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <QueryClientProvider client={queryClient}>
+        <>
+            <title>Relictify</title>
             <html lang="en">
                 <body className={din.className}>
-                    <AssetsProvider>
-                        <ManifestProvider>
-                            <main>{children}</main>
-                        </ManifestProvider>
-                    </AssetsProvider>
+                    <QueryClientProvider client={queryClient}>
+                        <AssetsProvider>
+                            <ManifestProvider>
+                                <main>{children}</main>
+                            </ManifestProvider>
+                        </AssetsProvider>
+                    </QueryClientProvider>
                 </body>
             </html>
-        </QueryClientProvider>
+        </>
     );
 }
