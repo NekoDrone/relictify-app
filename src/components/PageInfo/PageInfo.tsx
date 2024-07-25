@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { humanisePathEnum } from "@/shared/entities";
+import { humanisePageCategoryEnum, humanisePathEnum, PageCategory } from "@/shared/entities";
 import { FC } from "react";
 import { CharacterInfo } from "@/shared/characters/entities";
 
 export interface PageInfoProps {
-    pageTitle: AppPage,
+    pageTitle: PageCategory,
     activeChar: CharacterInfo
 }
 
@@ -22,7 +22,7 @@ const PageInfo: FC<PageInfoProps> = ({
                 className={"gold-filter"}
             />
             <div>
-                <p className="text-lg text-gold font-medium">{humanisePageEnum(pageTitle)}</p>
+                <p className="text-lg text-gold font-medium">{humanisePageCategoryEnum(pageTitle)}</p>
                 <div className={"flex"}>
                     <Image
                         src={`/assets/combat_paths/path_${activeChar.path}.webp`}

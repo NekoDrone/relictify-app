@@ -1,15 +1,19 @@
+"use client";
+
 import type { Metadata } from "next";
 import "./globals.css";
-import React from "react";
+import React, { Suspense } from "react";
 import localFont from "next/font/local";
+import { PomPomLoading } from "@/components/Loading/PomPomLoading";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { AssetsProvider } from "@/utilities/providers/AssetsProvider";
+import { ManifestProvider } from "@/utilities/providers/ManifestProvider";
 
 const din = localFont({
     src: "../../public/fonts/DIN.ttf",
 });
-export const metadata: Metadata = {
-    title: "Relictify",
-    description: "A relics simulator for Honkai: Star Rail",
-};
+
+const queryClient = new QueryClient();
 
 export default function RootLayout({
     children,
@@ -17,10 +21,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={din.className}>
-                <main>{children}</main>
-            </body>
-        </html>
+        <QueryClientProvider client={queryClient}>
+            <html lang="en">
+                <body className={din.className}>
+                    <AssetsProvider>
+                        <ManifestProvider>
+                            <main>{children}</main>
+                        </ManifestProvider>
+                    </AssetsProvider>
+                </body>
+            </html>
+        </QueryClientProvider>
     );
 }
