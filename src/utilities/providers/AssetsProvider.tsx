@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import fetchAssets from "@/functions/api/fetchAssets";
-import { createContext, useCallback, useContext } from "react";
+import { createContext, useContext } from "react";
 
 const initialContext: {
     assets: any;
