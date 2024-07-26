@@ -1,33 +1,29 @@
 import { API_KEY, API_URL, ApiEndpoints } from "@/functions/api/shared";
-import { Character } from "@/shared/types";
+import { Character, Manifest } from "@/shared/types";
 
 const fetchManifestAndStore = async () => {
     console.log("Characters not found in localStorage, fetching...");
 
-    const req = new Request(`${API_URL}/${ApiEndpoints.GET_CHARS}`, {
+    const req = new Request(`${API_URL}/${ApiEndpoints.GET_CHAR_MANIFEST}`, {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${API_KEY}`,
         },
     });
 
-    const characters: Character[] = await (await fetch(req)).json();
+    const manifest: Manifest = await (await fetch(req)).json();
 
-    localStorage.setItem("characters", JSON.stringify(characters));
-
-    return characters;
+    localStorage.setItem("manifest", JSON.stringify(manifest));
 };
 
 const fetchManifestFromStorage = () => {
     return JSON.parse(
-        localStorage.getItem("characters") ?? "undefined",
-    ) as Character[];
+        localStorage.getItem("manifest") ?? "undefined",
+    ) as Manifest;
 };
 
 export const fetchManifest = async () => {
-    const characters = localStorage.getItem("characters");
-    if (characters === null) await fetchManifestAndStore();
-    return {
-        characters: fetchManifestFromStorage(),
-    };
+    const manifest = localStorage.getItem("manifest");
+    if (manifest === null) await fetchManifestAndStore();
+    return fetchManifestFromStorage();
 };
