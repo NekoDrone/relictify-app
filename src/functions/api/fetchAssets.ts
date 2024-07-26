@@ -4,8 +4,6 @@ import { TarReader } from "@gera2ld/tarjs";
 
 const fetchAssets = async () => {
     if (typeof window !== "undefined") {
-        console.log("Attempting to fetch resources...");
-
         const req = new Request(ASSETS_URL, {
             headers: {
                 Accept: "application/x-gzip",
@@ -24,14 +22,6 @@ const fetchAssets = async () => {
                 reader.getFileBlob(fileInfo.name),
             );
         }
-
-        console.log(files);
-
-        //     for (const extractedElement of extracted) {
-        //         files[extractedElement.name] = extractedElement.getBlobUrl();
-        //     }
-        //     console.log(files);
-        // });
 
         return files;
     } else {
