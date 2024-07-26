@@ -8,17 +8,11 @@ import Error from "next/error";
 // TODO: Use this component when constructing a debug screen
 
 export const CharList = () => {
-    const { manifest, isPending, error } = useManifest();
+    const { manifestQuery, isPending, error } = useManifest();
 
-    if (isPending || !manifest) return <PomPomLoading />;
+    if (isPending || !manifestQuery) return <PomPomLoading />;
     if (error) return <Error statusCode={500} />;
 
-    const { characters } = manifest;
-    return (
-        <>
-            {characters?.map((character) => (
-                <CharReadout character={character} key={character.id} />
-            ))}
-        </>
-    );
+    const { manifest } = manifestQuery;
+    return <>{manifest?.map((id) => <p key={id}>{id}</p>)}</>;
 };
