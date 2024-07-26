@@ -6,6 +6,7 @@ export enum ApiEndpoints {
     GET_CHARS = "getChars",
     GET_CHAR = "getChars",
     GET_CHAR_MANIFEST = "getCharManifest",
+    GET_MANIFEST_META = "getManifestMeta",
 }
 
 export const ASSETS_URL =
