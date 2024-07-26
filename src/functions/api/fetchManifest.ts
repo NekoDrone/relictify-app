@@ -3,26 +3,30 @@ import { Manifest, ManifestMetadata } from "@/shared/types";
 
 export const fetchManifest = async () => {
     const { isOutdated, metadata } = await compareManifestMeta();
-    if (isOutdated) await fetchManifestsAndStore(metadata);
+    const isManifestStored = !!localStorage.getItem("manifest");
+    if (isOutdated || !isManifestStored) await fetchManifestsAndStore(metadata);
     return fetchManifestFromStorage();
 };
 
 const compareManifestMeta = async () => {
     const apiMeta = await fetchManifestMeta();
     const localMeta: ManifestMetadata = JSON.parse(
-        localStorage.getItem("manifestMetadata") ?? "",
+        localStorage.getItem("manifestMetadata") ?? "{}",
     );
-    if (!localMeta) {
+    if (!localMeta.version) {
         localStorage.setItem("manifestMetadata", JSON.stringify(apiMeta));
         return { isOutdated: true, metadata: apiMeta };
-    } else
+    } else {
+        const isOutdated =
+            apiMeta.version > localMeta.version ||
+            apiMeta.charsVersion > localMeta.charsVersion ||
+            apiMeta.relicsVersion > localMeta.relicsVersion;
+
         return {
-            isOutdated:
-                apiMeta.version > localMeta.version ||
-                apiMeta.charsVersion > localMeta.charsVersion ||
-                apiMeta.relicsVersion > localMeta.relicsVersion,
-            metadata: apiMeta,
+            isOutdated,
+            metadata: isOutdated ? apiMeta : localMeta,
         };
+    }
 };
 
 const fetchManifestMeta = async () => {
@@ -43,7 +47,13 @@ const fetchManifestsAndStore = async (metadata: ManifestMetadata) => {
         localStorage.getItem("manifestMetadata") ?? "",
     );
 
-    if (!localMeta || metadata.version > localMeta.version) {
+    const isManifestStored = !!localStorage.getItem("manifest");
+
+    if (
+        !localMeta ||
+        metadata.version > localMeta.version ||
+        !isManifestStored
+    ) {
         const manifest = await fetchAllManifests();
         localStorage.setItem("manifest", JSON.stringify(manifest));
     }
