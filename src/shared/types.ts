@@ -23,3 +23,10 @@ export interface Manifest {
     version: number;
     lastUpdated: Date;
 }
+
+export interface ManifestMetadata {
+    version: number;
+    charsVersion: number;
+    relicsVersion: number;
+    lastUpdated: Date;
+}
