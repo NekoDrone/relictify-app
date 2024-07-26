@@ -26,8 +26,9 @@ const LandingPage = () => {
                 <Image
                     src={relictifyLogoUrl}
                     alt={"Relictify Logo"}
-                    width={50}
-                    height={50}
+                    width={0}
+                    height={0}
+                    className={"w-auto h-auto"}
                 />
             </Suspense>
             <Link href={"/app/characters/1/details"} replace>
