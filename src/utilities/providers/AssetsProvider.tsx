@@ -27,6 +27,9 @@ export const AssetsProvider = ({ children }: any) => {
     } = useQuery({
         queryKey: ["assets"],
         queryFn: fetchAssets,
+        refetchOnMount: false,
+        refetchOnWindowFocus: false,
+        refetchOnReconnect: true,
     });
 
     return (
