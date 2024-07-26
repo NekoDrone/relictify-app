@@ -3,19 +3,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchManifest } from "@/functions/api/fetchManifest";
 import { createContext, useContext } from "react";
-import { Character } from "@/shared/types";
-
-interface ManifestItems {
-    characters: Character[];
-}
+import { Character, Manifest } from "@/shared/types";
 
 const initialContext: {
-    manifest: ManifestItems | undefined;
+    manifestQuery: Manifest | undefined;
     error: Error | null;
     isError: boolean;
     isPending: boolean;
 } = {
-    manifest: undefined,
+    manifestQuery: undefined,
     error: null,
     isError: false,
     isPending: true,
@@ -25,7 +21,7 @@ const ManifestContext = createContext(initialContext);
 
 export const ManifestProvider = ({ children }: any) => {
     const {
-        data: manifest,
+        data: manifestQuery,
         error,
         isError,
         isPending,
@@ -36,7 +32,7 @@ export const ManifestProvider = ({ children }: any) => {
 
     return (
         <ManifestContext.Provider
-            value={{ manifest, error, isError, isPending }}
+            value={{ manifestQuery, error, isError, isPending }}
         >
             {children}
         </ManifestContext.Provider>
