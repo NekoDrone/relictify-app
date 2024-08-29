@@ -28,6 +28,9 @@ export const ManifestProvider = ({ children }: any) => {
     } = useQuery({
         queryKey: ["manifest"],
         queryFn: fetchManifest,
+        refetchOnMount: false,
+        refetchOnWindowFocus: false,
+        refetchOnReconnect: true,
     });
 
     return (
