@@ -1,6 +1,5 @@
 "use client";
 
-import { CharReadout } from "@/components/CharReadout/CharReadout";
 import { useManifest } from "@/utilities/providers/ManifestProvider";
 import { PomPomLoading } from "@/components/Loading/PomPomLoading";
 import Error from "next/error";
