@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { Suspense } from "react";
 import { PageCategory } from "@/shared/entities";
 import { PomPomLoading } from "@/components/Loading/PomPomLoading";
 import Image from "next/image";
 import { usePageIcon } from "@/functions/selectors/assets";
-import { CharList } from "@/components/CharList/CharList";
 import Error from "next/error";
+import { CharList } from "@/components/Debug";
 
 const DebugPage = () => {
     const {
@@ -33,6 +32,7 @@ const DebugPage = () => {
             </Suspense>
             <h1 className="text-center p-4">Loaded Characters:</h1>
             <Suspense fallback={<PomPomLoading />}>
+                Character List:
                 <CharList />
             </Suspense>
         </div>
