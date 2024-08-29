@@ -6,8 +6,8 @@ import { PageCategory } from "@/shared/entities";
 import { PomPomLoading } from "@/components/Loading/PomPomLoading";
 import Image from "next/image";
 import { usePageIcon } from "@/functions/selectors/assets";
-import { CharList } from "@/components/CharList/CharList";
 import Error from "next/error";
+import { CharList } from "@/components/Debug";
 
 const LandingPage = () => {
     const {
@@ -31,7 +31,7 @@ const LandingPage = () => {
                     className={"w-auto h-auto"}
                 />
             </Suspense>
-            <Link href={"/app/characters/1/details"} replace>
+            <Link href={"/characters/1/details"} replace>
                 <button className="bg-white text-black m-0 rounded p-2">
                     TEMP: To App
                 </button>
