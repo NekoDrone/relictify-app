@@ -19,7 +19,7 @@ export interface Character {
 }
 
 export interface Manifest {
-    manifest: number[];
+    manifest: number[]; // array of numbers of valid character IDs.
     version: number;
     lastUpdated: Date;
 }
