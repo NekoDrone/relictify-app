@@ -18,7 +18,7 @@ An API server exists to deliver configuration files to the client, written in [E
 
 The project may be accessed at [NYI].
 
-For contribution guidelines, please look at [CONTRIBUTING.md](https://github.com/NekoDrone/relictify-app/blob/master/CONTRIBUTING.md)
+For contribution guidelines or to report an issue, please look at [CONTRIBUTING.md](https://github.com/NekoDrone/relictify-app/blob/master/CONTRIBUTING.md)
 
 ## Acknowledgements
 
