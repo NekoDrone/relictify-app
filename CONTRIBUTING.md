@@ -35,9 +35,9 @@ Please ensure that commits follow the [Conventional Commits](https://www.convent
 
 ### Forks and Pull Requests
 
-Commits to main are not allowed unless made by a core collaborator.
+Commits to `master` are not allowed unless made by a core collaborator.
 
-You may fork the project on their own, and make pull requests to the main branch accordingly.
+You may fork the project on your own, and make pull requests to the `master` branch accordingly.
 
 For pull requests, please ensure that they follow this convention
 `[{ISSUE_NO}]? {TYPE}: {MESSAGE}`. For example, `[12] feat: label copy enhancements`, or `fix: character menu reload issue`.
@@ -51,7 +51,15 @@ For pull requests, please ensure that they follow this convention
 
 For bug reports, feature requests, or other miscellaneous issues, please file it accordingly under the [issues tab](https://github.com/NekoDrone/relictify-app/issues) in the GitHub repository.
 
+### Format
+
+~~Please follow the issue template for bug reporting under `ISSUE_TEMPLATE.md`~~
+
+This project now uses GitHub's Issue templates for both feature requests, and bug reports.
+
 ## FAQ
+
+// To be added when questions arise.
 
 ## Support
 
