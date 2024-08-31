@@ -1,11 +1,11 @@
 "use client";
 
-import { Character } from "@/shared/types";
+import { ApiCharacter } from "@/shared/types";
 
 export const identifierKey = "character";
 
 export interface LocalStorageCharacterResult {
-    character: Character | null;
+    character: ApiCharacter | null;
     isExists: boolean;
 }
 
@@ -15,7 +15,7 @@ export const findLocalStorageCharacters = (id: number) => {
     if (!charJson) return { character: null, isExists: false };
     else
         return {
-            character: JSON.parse(charJson) as Character,
+            character: JSON.parse(charJson) as ApiCharacter,
             isExists: true,
         } as LocalStorageCharacterResult;
 };

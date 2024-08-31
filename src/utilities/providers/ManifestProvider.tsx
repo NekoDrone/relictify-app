@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchManifest } from "@/functions/api/fetchManifest";
 import { createContext, useContext } from "react";
-import { Character, Manifest } from "@/shared/types";
+import { ApiCharacter, Manifest } from "@/shared/types";
 
 const initialContext: {
     manifestQuery: Manifest | undefined;

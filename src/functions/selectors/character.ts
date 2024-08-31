@@ -1,1 +1,1 @@
-export function useCharacterStorage() {}
+export function useCharacterStorage(id: number) {}

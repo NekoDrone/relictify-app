@@ -9,7 +9,7 @@ const DetailsPage: FC<IdParamsProps> = ({ params }) => {
 
     const { character } = findLocalStorageCharacters(id);
 
-    return <>details :3 {id}</>;
+    return <>details :3 {character ?? "not found :("}</>;
 };
 
 export default DetailsPage;

@@ -6,7 +6,7 @@ export interface ParamsProps {
     };
 }
 
-export interface Character {
+export interface ApiCharacter {
     id: number;
     rarity: 4 | 5;
     name: string;

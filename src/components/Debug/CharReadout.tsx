@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useElementIcon } from "@/functions/selectors/assets";
 import { humanisePathEnum } from "@/shared/entities";
 import { FC } from "react";
-import { Character } from "@/shared/types";
+import { ApiCharacter } from "@/shared/types";
 import Error from "next/error";
 
 // TODO: Use this component when constructing a debug screen
 
 interface CharReadoutProps {
-    character: Character;
+    character: ApiCharacter;
 }
 
 export const CharReadout: FC<CharReadoutProps> = ({ character }) => {
