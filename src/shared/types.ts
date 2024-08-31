@@ -1,4 +1,4 @@
-import { CharPath, CombatElement } from "@/shared/entities";
+import { CharPath, CombatElement, RelicType } from "@/shared/entities";
 
 export interface ParamsProps {
     params: {
@@ -17,6 +17,27 @@ export interface ApiCharacter {
     base_def_80: number;
     base_spd: number;
 }
+
+export interface LocalCharacter extends ApiCharacter {}
+
+export interface Relic {
+    id: number;
+    type: RelicType;
+    set: string;
+}
+
+export type SubStat = {
+    type: StatType;
+    value: number;
+    enhancementCount: number;
+};
+
+export type MainStat = {
+    type: StatType;
+    value: number;
+};
+
+export enum StatType {}
 
 export interface Manifest {
     manifest: number[]; // array of numbers of valid character IDs.
