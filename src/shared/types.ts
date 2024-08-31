@@ -18,7 +18,9 @@ export interface ApiCharacter {
     base_spd: number;
 }
 
-export interface LocalCharacter extends ApiCharacter {}
+export interface LocalCharacter extends ApiCharacter {
+    relic: Relic;
+}
 
 export interface Relic {
     id: number;

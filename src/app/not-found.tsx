@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function NotFound() {
     return (
-        <div className="flex h-screen justify-center items-center content-center">
+        <div className="flex h-screen content-center items-center justify-center">
             <div>
-                <div className="flex justify-center items-center gap-4">
-                    <h1 className="text-red-400 font-bold text-3xl">404</h1>
+                <div className="flex items-center justify-center gap-4">
+                    <h1 className="text-3xl font-bold text-red-400">404</h1>
                     <Image
                         src={"/pompom_404.webp"}
                         alt={"404"}
@@ -20,9 +20,9 @@ export default function NotFound() {
                         back to the Express!
                     </p>
                 </div>
-                <div className="flex justify-center align-middle h-fit">
+                <div className="flex h-fit justify-center align-middle">
                     <Link href={"/"} replace>
-                        <button className="justify-center bg-gold text-black rounded w-auto p-2">
+                        <button className="w-auto justify-center rounded bg-gold p-2 text-black">
                             Back home!
                         </button>
                     </Link>

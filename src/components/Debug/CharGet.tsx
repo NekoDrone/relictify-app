@@ -10,7 +10,7 @@ interface CharGetProps {
 export const CharGet: FC<CharGetProps> = ({ id, handleGetChar }) => {
     return (
         <button
-            className="justify-center bg-gold text-black rounded w-auto p-2"
+            className="w-auto justify-center rounded bg-gold p-2 text-black"
             onClick={handleGetChar}
         >
             Get Character {id}

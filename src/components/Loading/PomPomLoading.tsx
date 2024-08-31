@@ -6,7 +6,7 @@ export const PomPomLoading = () => {
     return (
         <div
             className={
-                "flex h-screen justify-center items-center content-center"
+                "flex h-screen content-center items-center justify-center"
             }
         >
             <p>Pom Pom is thinking really hard!!</p>

@@ -4,8 +4,8 @@ Relictify is open to contributions. This document contains technical setup detai
 
 ## Requirements
 
-- [Git](https://git-scm.com/) if you don't already have it.
-- [Node.js](https://nodejs.org/) 20 or greater.
+-   [Git](https://git-scm.com/) if you don't already have it.
+-   [Node.js](https://nodejs.org/) 20 or greater.
 
 ## Getting Started
 

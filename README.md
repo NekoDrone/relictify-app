@@ -22,12 +22,12 @@ For contribution guidelines or to report an issue, please look at [CONTRIBUTING.
 
 ## Acknowledgements
 
-- [HSR Fandom Wiki](https://honkai-star-rail.fandom.com/) for accurate data reporting and formulation, the bulk of which this project relies on.
-- [Star Rail Station](https://starrailstation.com/) for many of the inspirations behind the project.
-- [Hoyoverse](https://www.hoyoverse.com/) for creating Honkai: Star Rail.
+-   [HSR Fandom Wiki](https://honkai-star-rail.fandom.com/) for accurate data reporting and formulation, the bulk of which this project relies on.
+-   [Star Rail Station](https://starrailstation.com/) for many of the inspirations behind the project.
+-   [Hoyoverse](https://www.hoyoverse.com/) for creating Honkai: Star Rail.
 
 ## Contributors
 
-- NekoDrone (Project Lead)
-- Hollyw27 (Founding Contributor)
-- Archeri2000 (Technical Advisor)
+-   NekoDrone (Project Lead)
+-   Hollyw27 (Founding Contributor)
+-   Archeri2000 (Technical Advisor)

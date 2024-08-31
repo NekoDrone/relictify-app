@@ -32,7 +32,7 @@ export const CharReadout: FC<CharReadoutProps> = ({ character }) => {
                 alt={character.element}
                 width={0}
                 height={0}
-                className={"w-auto h-auto"}
+                className={"h-auto w-auto"}
             />
             {` | ${humanisePathEnum(character.path)}`}
         </span>

@@ -19,18 +19,18 @@ const DebugPage = () => {
     if (error) return <Error statusCode={500} />;
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center p-32 gap-2">
-            <h1 className="text-center p-4 text-red-400">Relictify DEBUG</h1>
+        <div className="flex min-h-screen flex-col items-center justify-center gap-2 p-32">
+            <h1 className="p-4 text-center text-red-400">Relictify DEBUG</h1>
             <Suspense>
                 <Image
                     src={relictifyLogoUrl}
                     alt={"Relictify Logo"}
                     width={0}
                     height={0}
-                    className={"w-auto h-auto"}
+                    className={"h-auto w-auto"}
                 />
             </Suspense>
-            <h1 className="text-center p-4">Loaded Characters:</h1>
+            <h1 className="p-4 text-center">Loaded Characters:</h1>
             <Suspense fallback={<PomPomLoading />}>
                 Character List:
                 <CharList />

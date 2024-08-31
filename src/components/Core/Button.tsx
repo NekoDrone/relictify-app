@@ -7,10 +7,10 @@ interface ButtonProps {
     handleClick: EventHandler<any>;
 }
 
-export const CharGet: FC<ButtonProps> = ({ label, handleClick }) => {
+export const Button: FC<ButtonProps> = ({ label, handleClick }) => {
     return (
         <button
-            className="justify-center bg-gold text-black rounded w-auto p-2"
+            className="w-auto justify-center rounded bg-gold p-2 text-black"
             onClick={handleClick}
         >
             {label}

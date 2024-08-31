@@ -9,14 +9,14 @@ export interface NavItemProps {
     currPage: AppPage;
 }
 
-export const PageNavItem: FC<NavItemProps> = ({
-    page,
-    charId,
-    currPage,
-}) => {
-    const highlighted = currPage == page
+export const PageNavItem: FC<NavItemProps> = ({ page, charId, currPage }) => {
+    const highlighted = currPage == page;
     return (
-         <Link className="flex items-center cursor-pointer" href={`/app/characters/${charId}/${page}`} replace>
+        <Link
+            className="flex cursor-pointer items-center"
+            href={`/app/characters/${charId}/${page}`}
+            replace
+        >
             <Image
                 src={`/assets/page_icons/page_${page}.webp`}
                 alt="PageNavItem"
@@ -24,11 +24,13 @@ export const PageNavItem: FC<NavItemProps> = ({
                 height={43}
                 className={`scale-50 ${highlighted && "gold-filter"}`}
             />
-            <p className={`text-lg font-semibold p-1 ${highlighted && "text-gold"}`}>{humanisePageEnum(page)}</p>
+            <p
+                className={`p-1 text-lg font-semibold ${highlighted && "text-gold"}`}
+            >
+                {humanisePageEnum(page)}
+            </p>
         </Link>
     );
 };
 
-function handleClick() {
-    
-}
+function handleClick() {}

@@ -8,39 +8,41 @@ export enum CharacterId {
 
 export const getCharacterString = (characterId: CharacterId): string => {
     return Object.values(characterStrings)[characterId];
-}
+};
 
-export const getCharacterStringHumanised = (characterId: CharacterId): string => {
+export const getCharacterStringHumanised = (
+    characterId: CharacterId,
+): string => {
     return getCharacterString(characterId)
         .split("_")
         .map((v) => {
             return v.charAt(0).toUpperCase() + v.slice(1);
         })
-        .join(" ")
-}
+        .join(" ");
+};
 
 enum characterStrings {
     TRAILBLAZER = "trailblazer",
     BRONYA = "bronya",
-    SEELE = "seele"
+    SEELE = "seele",
 }
 
 export interface CharacterInfo {
-    id: CharacterId
-    rarity: number,
-    name: string,
-    element: CombatElement,
-    path: CharPath,
-    startingHp: number
-    startingAtk: number,
-    startingDef: number,
-    startingSpd: number,
+    id: CharacterId;
+    rarity: number;
+    name: string;
+    element: CombatElement;
+    path: CharPath;
+    startingHp: number;
+    startingAtk: number;
+    startingDef: number;
+    startingSpd: number;
 }
 
 export function getCharById(id: number) {
-    const jsonData = localStorage.getItem(id.toString())
-    if(jsonData === null) {
-        throw new Error(`Could not find character of id: ${id}`)
+    const jsonData = localStorage.getItem(id.toString());
+    if (jsonData === null) {
+        throw new Error(`Could not find character of id: ${id}`);
     }
-    return JSON.parse(jsonData) as CharacterInfo
+    return JSON.parse(jsonData) as CharacterInfo;
 }
