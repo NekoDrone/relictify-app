@@ -9,8 +9,8 @@ export interface LocalStorageCharacterResult {
     isExists: boolean;
 }
 
-export const findLocalStorageCharacters = (name: string) => {
-    const key = `${identifierKey}:${name}`;
+export const findLocalStorageCharacters = (id: number) => {
+    const key = `${identifierKey}:${id}`;
     const charJson = localStorage.getItem(key);
     if (!charJson) return { character: null, isExists: false };
     else
