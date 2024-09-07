@@ -12,16 +12,26 @@ Relictify is open to contributions. This document contains technical setup detai
 Ensure that the requirements stated above are fulfilled.
 
 1. Clone this project `git clone https://github.com/NekoDrone/relictify-app`
-2. Install dependencies `npm i`
+2. Install dependencies `npm install`
 3. Start the development server at least once to ensure all configuration files are generated properly `npm run dev`
 
 You may also run the following:
 
-```
+```bash
 git clone https://github.com/NekoDrone/relictify-app
-npm i
+npm install
 npm run dev
 ```
+
+Alternative for pnpm/yarn users:
+
+```bash
+git clone https://github.com/NekoDrone/relictify-app
+pnpm install
+pnpm dev
+```
+
+YMMV for Bun, none of the development team uses Bun.
 
 You may visit the development version of the app at [http://localhost:3000/](http://localhost:3000/).
 
