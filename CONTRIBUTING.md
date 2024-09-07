@@ -23,11 +23,15 @@ npm i
 npm run dev
 ```
 
-## Commit Guidelines
+You may visit the development version of the app at [http://localhost:3000/](http://localhost:3000/).
+
+## Project Structure
 
 This project generally follows the Next.js project structure using the App Router. Routes are placed in the `/src/app` directory, while components are placed in the `/src/components` category.
 
-`/src/exports` is meant for shared entities, helpers, and other functions that may be used in the future. As of writing, Zustand is being considered for use in this project.
+`/src/shared` for shared entities, `/src/functions` for helpers, and other functions. `/src/providers` for React context providers.
+
+## Commit Guidelines
 
 Before committing, please ensure that Prettier and ESLint are run. A `.prettierrc` file is given in the repository, alongside an `.eslintrc.json` file.
 
@@ -35,12 +39,14 @@ Please ensure that commits follow the [Conventional Commits](https://www.convent
 
 ### Forks and Pull Requests
 
-Commits to `master` are not allowed unless made by a core collaborator.
+Commits to `master` are blocked unless made by a core collaborator.
 
 You may fork the project on your own, and make pull requests to the `master` branch accordingly.
 
 For pull requests, please ensure that they follow this convention
-`[{ISSUE_NO}]? {TYPE}: {MESSAGE}`. For example, `[12] feat: label copy enhancements`, or `fix: character menu reload issue`.
+`[#{ISSUE_NO}]? {TYPE}: {MESSAGE}`. For example, `[#12] feat: label copy enhancements`, or `fix: character menu reload issue`.
+
+Mentioning the issue number when opening a pull request to `master` will automatically link the PR to it.
 
 ### Additional Notes
 
